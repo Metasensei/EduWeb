@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-
+      <h1>EduWeb</h1>
       <Routes>
         <Route index element={<Home />} />
         <Route path='/admin' element={<Admin />} />
