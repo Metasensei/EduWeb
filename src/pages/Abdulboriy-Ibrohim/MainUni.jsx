@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { LineChart } from '@mui/x-charts'
 // import {Route, Routes, NavLink } from 'react-router-dom';
-
+import './MainUni.css'
 
 
 
