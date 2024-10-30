@@ -61,12 +61,7 @@ const Universty = () => {
           </a>
         </div>
       </div>
-      <Routes>
-        <Route index element={<Mainuni />} />
-        <Route path='/universty/abstudent' element={<AbStudents />} />
-        <Route path='/universty/abinvoice' element={<AbInvoice />} />
-        <Route path='/universty/abdata' element={<AbData />} />
-      </Routes>
+
     </div>
   );
 }
