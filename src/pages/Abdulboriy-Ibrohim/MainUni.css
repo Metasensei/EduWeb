@@ -1,0 +1,110 @@
+.ab-page1{
+    display: flex;
+    flex-direction: row;
+    width: 1513px;
+    background-color: aqua;
+  }
+  
+  .ab-cards{
+    color: black;
+    display: flex;
+    justify-content: center;
+    .ab-card{
+      display: flex;
+      background-color: #FFFFFF;
+      flex-direction: column;
+      align-items: center;
+      border-left: 7px solid;
+      width: 250px;
+      height: 158px;
+      border-radius: 14px;
+      margin: 20px;
+      box-shadow: 2px 4px 9px 0px #0000001A;
+      box-shadow: 0px -2px 8px 0px #00000017;
+
+    }
+    p{
+        font-family: Raleway;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+
+    }
+    h5{
+        font-family: 'Raleway';
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 0px;
+        letter-spacing: 0.02em;
+        
+
+    }
+    .ab-card1{
+        border-left: 7px solid #000D7F;
+        h5{
+            color: #000D7F;
+        }
+    }
+    .ab-card2{
+        border-left: 7px solid #FCCA58;
+        h5{
+            color: #FCCA58;
+        }
+    }
+    .ab-card3{
+        border-left: 7px solid #10CC9B;
+        h5{
+            color: #10CC9B;
+        }
+    }
+    .ab-card4{
+        border-left: 7px solid #E96383;
+        h5{
+            color: #E96383;
+        }
+    }
+  }
+  .main-uni{
+    background-color: white;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 1225px;
+  }
+  .side-bar{
+    width: 290px;
+    height: 2089px;
+    gap: 0px;
+    opacity: 0px;
+    background-color: #000D7F;
+    .ablinks{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        a{
+            text-align: left;
+            font-family: Raleway;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.13px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            width: 289px;
+            height: 56px;
+            top: 127px;
+            gap: 0px;
+            opacity: 0px;
+        }
+    }
+  }
+  .LineContainer{
+    width: 1090px;
+    height: 496px;
+    box-shadow: 2px 4px 9px 0px #0000001A;
+    box-shadow: 0px -2px 8px 0px #00000017;
+
+  }

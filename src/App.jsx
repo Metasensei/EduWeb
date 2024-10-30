@@ -5,10 +5,12 @@ import Student from './pages/Student/Student'
 import Universty from './pages/Universty/Universty'
 import Home from './pages/Home/Home'
 
+
 function App() {
 
   return (
     <>
+
       <h1>EduWeb</h1>
       <Routes>
         <Route index element={<Home />} />
@@ -18,6 +20,9 @@ function App() {
         <Route path='/login' element={ "<h1>Login</h1>> "}/>
         <Route path='*' element={ "<h1>404 error</h1>> "}/>
       </Routes>
+
+
+
     </>
   )
 }
