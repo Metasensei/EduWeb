@@ -64,8 +64,8 @@ const Universty = () => {
           <Routes>
             <Route path='/' element={<Mainuni/>}/>
             <Route path='/universty/abstudent' element={<AbStudents/>}/>
-            <Route/>
-            <Route/>
+            <Route path='/universty/abinvoice'element={<AbInvoice/>}/>
+            <Route path='//universty/abdata' element={<AbData/>}/>
           </Routes>
     </div>
   );
