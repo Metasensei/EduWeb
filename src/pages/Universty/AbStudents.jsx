@@ -2,8 +2,8 @@ import React from 'react'
 
 const AbStudents = () => {
   return (
-    <div>
-      student
+    <div className='main-uni' >
+      Student
     </div>
   )
 }
