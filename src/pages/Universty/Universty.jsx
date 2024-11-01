@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Routes, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import './Universty.css';
 import users2 from './images/2users.png';
 import users3 from './images/3users.png';
@@ -13,60 +13,51 @@ import AbInvoice from './AbInvoice';
 import AbData from './AbData';
 
 const Universty = () => {
+  const [activeLink, setActiveLink] = useState('/universty');
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
+
   return (
     <div className='ab-page1'>
       <div className='side-bar'>
         <p><img src={logo} alt="" />Education</p>
         <div className="ablinks">
-          <NavLink
-            className='a'
-            style={({ isActive }) => ({
-              borderLeft: isActive ? '7px solid white' : '7px solid transparent',
-            })}
+          <Link
+            className={`un_side_link ${activeLink === '/universty' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('/universty')}
             to='/universty'
           >
             <img src={home} alt="" />Главное
-          </NavLink>
-          <NavLink
-            className='a'
-            style={({ isActive }) => ({
-              borderLeft: isActive ? '7px solid white' : '7px solid transparent',
-            })}
+          </Link>
+          <Link
+            className={`un_side_link ${activeLink === '/universty/abstudent' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('/universty/abstudent')}
             to='/universty/abstudent'
           >
             <img src={users3} alt="" />Студенты
-          </NavLink>
-          <NavLink
-            className='a'
-            style={({ isActive }) => ({
-              borderLeft: isActive ? '7px solid white' : '7px solid transparent',
-            })}
+          </Link>
+          <Link
+            className={`un_side_link ${activeLink === '/universty/abinvoice' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('/universty/abinvoice')}
             to='/universty/abinvoice'
           >
             <img src={users2} alt="" />Инвойсы
-          </NavLink>
-          <NavLink
-            className='a'
-            style={
-              ({ isActive }) => ({
-              borderLeft: isActive ? '7px solid white' : '7px solid transparent',
-              
-            })}
+          </Link>
+          <Link
+            className={`un_side_link ${activeLink === '/universty/abdata' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('/universty/abdata')}
             to='/universty/abdata'
           >
             <img src={docs} alt="" />Данные
-          </NavLink>
-          <a href='/login' className='a'>
+          </Link>
+          <a href='/login' className='un_side_link'>
             <img src={logout} alt="" />Выйти
           </a>
         </div>
       </div>
-          <Routes>
-            <Route path='/' element={<Mainuni/>}/>
-            <Route path='/universty/abstudent' element={<AbStudents/>}/>
-            <Route path='/universty/abinvoice'element={<AbInvoice/>}/>
-            <Route path='//universty/abdata' element={<AbData/>}/>
-          </Routes>
+      <Outlet />
     </div>
   );
 }
