@@ -167,6 +167,45 @@
   .chart-inner{
     
   }
+  .top-main-uni{
+    img{
+      width: 50px;
+      border-radius: 50%;
+    }
+    display: flex;
+    justify-content: space-between;
+    width: 1120px;
+    
+  }
+  .glav{
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30.52px;
+    text-align: left;
+
+  }
+  .har{
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.78px;
+    text-align: left;    
+    margin: 0;
+  }
+  .bos{
+    font-family: Raleway;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.78px;
+  text-align: left;
+  margin: 0;
+  }
+  .right-top{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
   /* .a-active{
     border-left: 7px solid white;
   } */
