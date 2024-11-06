@@ -11,6 +11,7 @@ import AbStudents from './AbStudents';
 import Mainuni from './Mainuni';
 import AbInvoice from './AbInvoice';
 import AbData from './AbData';
+import group from './images/Group.png'
 
 const Universty = () => {
   const [activeLink, setActiveLink] = useState('/universty');

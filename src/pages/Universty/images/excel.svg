@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Excel">
+  <path fill="#ffffff" d="M23.5 3H14V.5a.5.5 0 0 0-.59-.5l-13 2.5A.5.5 0 0 0 0 3v18a.5.5 0 0 0 .41.49l13 2.5h.09a.5.5 0 0 0 .5-.5V21h9.5a.5.5 0 0 0 .5-.5v-17a.5.5 0 0 0-.5-.5ZM8.95 16.28a.5.5 0 0 1-.89.45L6.5 13.62l-1.55 3.1a.5.5 0 0 1-.89-.45l1.88-3.77-1.89-3.78a.5.5 0 0 1 .89-.45l1.56 3.11 1.55-3.1a.5.5 0 0 1 .89.45L7.06 12.5ZM23 20h-9v-1h2.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H14v-1h2.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H14v-1h2.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H14v-1h2.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H14V7h2.5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H14V4h9Z" class="color303c42 svgShape"></path>
+  <rect width="4" height="2" x="18" y="5" fill="#ffffff" rx=".5" ry=".5" class="color303c42 svgShape"></rect>
+  <rect width="4" height="2" x="18" y="8" fill="#ffffff" rx=".5" ry=".5" class="color303c42 svgShape"></rect>
+  <rect width="4" height="2" x="18" y="11" fill="#ffffff" rx=".5" ry=".5" class="color303c42 svgShape"></rect>
+  <rect width="4" height="2" x="18" y="14" fill="#ffffff" rx=".5" ry=".5" class="color303c42 svgShape"></rect>
+  <rect width="4" height="2" x="18" y="17" fill="#ffffff" rx=".5" ry=".5" class="color303c42 svgShape"></rect>
+</svg>
