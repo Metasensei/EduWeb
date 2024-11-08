@@ -75,14 +75,31 @@ const Mainuni = () => {
         <div className='top-main-uni'>
           <h2 className='glav'>Главное</h2>
           <div className='right-top'>
-            <img src={harvard} alt="" />
+            <img className='harvard-img' src={harvard} alt="" />
             <div>
               <p className='har'>Harvard University</p>
               <p className='bos'>Boston, USA</p>
             </div>
           </div>
         </div>
-
+          <div className='ab-cards'>
+                <div className='ab-card1 ab-card'>
+                  <p>Студенты</p>
+                  <h5>1424</h5>
+                </div>
+                <div className='ab-card2 ab-card'>
+                  <p>Инвойсы</p>
+                  <h5>80</h5>
+                </div>
+                <div className='ab-card3 ab-card'>
+                  <p>Поступившие</p>
+                  <h5>52</h5>
+                </div>
+                <div className='ab-card4 ab-card'>
+                  <p>Непоступившие</p>
+                  <h5>18</h5>
+                </div>
+          </div>
         <div className="chart-container" style={{width: '1090px', padding: '20px', backgroundColor: '#ffffff', borderRadius: '8px' }}>
       {/* Title on the left */}
       <h3 className='dynamic-change' style={{ textAlign: 'left', marginBottom: '20px',  }}>Динамика роста или спада</h3>
