@@ -3,9 +3,10 @@ import harvard from './images/harvard.png';
 import group from './images/excel.svg';
 import search from './images/search.png';
 import filter from './images/filter.png';
-const AbStudents = () => {
 
+const AbStudents = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [facultyFilter, setFacultyFilter] = useState("");
 
   let students = [
     {
@@ -189,15 +190,20 @@ const AbStudents = () => {
       "speciality": "Sustainable Development"
     }
   ];
-  
+
+  // Extract unique faculties for the dropdown filter
+  const uniqueFaculties = [...new Set(students.map(student => student.faculty))];
+
   const filteredStudents = students.filter((student) => {
     const query = searchQuery.toLowerCase();
+    const matchesFaculty = facultyFilter ? student.faculty === facultyFilter : true;
     return (
-      student.name.toLowerCase().includes(query) ||
+      matchesFaculty &&
+      (student.name.toLowerCase().includes(query) ||
       student.surename.toLowerCase().includes(query) ||
       student.faculty.toLowerCase().includes(query) ||
       student.ielts.toString().includes(query) ||
-      student.gpa.toString().includes(query)
+      student.gpa.toString().includes(query))
     );
   });
 
@@ -232,15 +238,27 @@ const AbStudents = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
-        <div className="filter-wrap">
-          <img className="filter" src={filter} alt="" />
-        </div>
+        
       </form>
 
       {/* Student List */}
       <div className="student-list">
-        <h1 className="student-list-title">Список абитуриентов</h1>
-        <p className='list-filter'></p>
+       <div className='list-top-part'>
+       <h1 className="student-list-title">Список абитуриентов</h1>
+          
+          <select
+            className="faculty-dropdown"
+            value={facultyFilter}
+            onChange={(e) => setFacultyFilter(e.target.value)}
+          >
+            <option value="">All Faculties</option>
+            {uniqueFaculties.map((faculty, index) => (
+              <option key={index} value={faculty}>
+                {faculty}
+              </option>
+            ))}
+          </select>
+       </div>
         <div className="st-list-names">
           <h3>ФИО</h3>
           <h3>Факультет</h3>
@@ -264,7 +282,6 @@ const AbStudents = () => {
       </div>
     </div>
   );
-}
+};
 
-
-export default AbStudents
+export default AbStudents;
