@@ -345,6 +345,7 @@ letter-spacing: 0.02em;
 text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
+display: inline;
 
 }
 .st-list-names h3 {
@@ -410,3 +411,21 @@ box-shadow: 0px -2px 8px 0px #00000017;
   text-align: left; /* Ensure text aligns with header */
 }
 
+.list-filter{
+  text-align: right;
+  
+  display: inline;
+  margin-left: 800px;
+}
+.list-top-part{
+  display: flex;
+  justify-content: space-between;
+}
+.faculty-dropdown{
+  outline: none;
+  border: none;
+
+}
+.faculty-dropdown:focus{
+  outline: solid 1px;
+}
