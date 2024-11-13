@@ -14,7 +14,9 @@ function App() {
     <>
       <Routes>
         <Route index element={<Home />} />
-        <Route path='/admin' element={<Admin />} />
+        <Route path='/admin' element={<Admin />} >
+        <Route path='/AdminList' element = {<AdminList/>} />
+        </Route>
         <Route path='/student' element={<Student />} />
         <Route path='/universty' element={<Universty />} >
           <Route index element={<Mainuni />} />

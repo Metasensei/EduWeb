@@ -2,7 +2,11 @@ import React from 'react'
 
 const AdminList = () => {
   return (
-    <div>AdminList</div>
+    <>
+    <aside className=''>
+
+    </aside>
+    </>
   )
 }
 
