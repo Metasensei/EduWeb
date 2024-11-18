@@ -8,6 +8,7 @@ import AbStudents from './pages/Universty/AbStudents'
 import Mainuni from './pages/Universty/Mainuni'
 import AbInvoice from './pages/Universty/AbInvoice'
 import AbData from './pages/Universty/AbData'
+import AdminUniver from './pages/Admin/AdminUniver'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='/admin' element={<Admin />} >
-        <Route path='/AdminList' element = {<AdminList/>} />
+          <Route path='adminuniver' element={<AdminUniver />} />
         </Route>
         <Route path='/student' element={<Student />} />
         <Route path='/universty' element={<Universty />} >
