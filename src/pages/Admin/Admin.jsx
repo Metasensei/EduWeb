@@ -1,53 +1,63 @@
-import React from 'react'
+import { useState } from 'react'
 
-import {Routes, Route,Outlet} from 'react-router-dom'
-import AdminList from './AdminList'
+import { Link, Outlet } from 'react-router-dom'
+import AdminUniver from './AdminUniver'
+import logo from '../Admin/images/logo.png'
+import home from '../Admin/images/home.png'
+import users from '../Admin/images/2users.png'
+import univer from '../Admin/images/univer.png'
+import AdminStudent from '../Admin/AdminStudemt'
+import back from '../Admin/images/logout.png'
+import './Admin.css'
+
 
 const Admin = () => {
-  const handleLinkClick = (path) => {
+  const [activeLink, setActiveLink] = useState('/admin');
+
+  const LinkOnClick = (path) => {
     setActiveLink(path);
   };
+
   return (
     <>
-     <div className='ab-page1'>
-      <div className='side-bar'>
-        <p><img src={logo} alt="" />Education</p>
-        <div className="ablinks">
-          <Link
-            className={`admin_side_link ${activeLink === '/admin' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/admin')}
-            to='/admin'
+      <div className="ad_page container">
+        <div className="sidebar">
+          <p><img src={logo} alt="" />Education</p>
+          <div className="links">
+            <Link
+              className={`ad_side_link ${activeLink === '/admin' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/admin')}
+              to='/admin'
+            >
+              <img src={home} alt="" />Главное
+            </Link>
+            <Link
+              className={`ad_side_link ${activeLink === '/admin/adminuniver' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/admin/adminuniver')}
+              to='/admin/adminuniver'
+            >
+              <img src={univer} alt="" />Университеты
+            </Link>
+            <Link
+            className={`ad_side_link ${activeLink === '/admin/adminstudent' ? 'active' : ''}`}
+            onClick={() => LinkOnClick('/admin/adminstudent')}
+            to='/admin/adminstudent'
           >
-            <img src={home} alt="" />Главное
+            <img src={users} alt="" />Студенты
           </Link>
           <Link
-            className={`admin_side_link ${activeLink === '/universty/abstudent' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/universty/abstudent')}
-            to='/universty/abstudent'
+            className={`ad_side_link ${activeLink === '/login' ? 'active' : ''}`}
+            onClick={() => LinkOnClick('/login')}
+            to='/login'
           >
-            <img src={users3} alt="" />Студенты
+            <img src={back} alt="" />Выйти
           </Link>
-          <Link
-            className={`un_side_link ${activeLink === '/universty/abinvoice' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/universty/abinvoice')}
-            to='/universty/abinvoice'
-          >
-            <img src={users2} alt="" />Инвойсы
-          </Link>
-          <Link
-            className={`un_side_link ${activeLink === '/universty/abdata' ? 'active' : ''}`}
-            onClick={() => handleLinkClick('/universty/abdata')}
-            to='/universty/abdata'
-          >
-            <img src={docs} alt="" />Данные
-          </Link>
-          <a href='/login' className='un_side_link'>
-            <img src={logout} alt="" />Выйти
-          </a>
+            
+          </div>
         </div>
+        <Outlet></Outlet>
       </div>
-      <Outlet />
-    </div>
+      
 
     </>
 
