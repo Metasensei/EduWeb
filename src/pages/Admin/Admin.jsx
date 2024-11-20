@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import { Link, Outlet } from 'react-router-dom'
 import AdminUniver from './AdminUniver'
 import logo from '../Admin/images/logo.png'
@@ -25,9 +24,9 @@ const Admin = () => {
           <p><img src={logo} alt="" />Education</p>
           <div className="links">
             <Link
-              className={`ad_side_link ${activeLink === '/admin' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/admin')}
-              to='/admin'
+              className={`ad_side_link ${activeLink === '/admin/adminhome' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/admin/adminhome')}
+              to='/admin/adminhome'
             >
               <img src={home} alt="" />Главное
             </Link>

@@ -10,6 +10,7 @@ import AbInvoice from './pages/Universty/AbInvoice'
 import AbData from './pages/Universty/AbData'
 import AdminUniver from './pages/Admin/AdminUniver'
 import AdmminStudent from '../src/pages/Admin/AdminStudemt'
+import AdminHome from '../src/pages/Admin/AdminHome'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='/admin' element={<Admin />} >
+          <Route path='adminhome' element={<AdminHome />} />
           <Route path='adminuniver' element={<AdminUniver />} />
           <Route path='adminstudent' element={<AdmminStudent />} />
         </Route>

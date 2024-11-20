@@ -1,10 +1,10 @@
 import React from 'react'
-
+import '../Admin/AdminStudent.css'
 const AdminStudemt = () => {
   return (
-    <div>
-      <h1>`AdminStudemt` Component</h1>
-    </div>
+    <>
+      <h1>Admin Student</h1>
+    </>
   )
 }
 
