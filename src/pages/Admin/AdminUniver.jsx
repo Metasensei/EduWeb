@@ -2,9 +2,12 @@ import React from 'react'
 
 const AdminUniver = () => {
   return (
-    <div>
+    <>
+    
+    
+    </>
       
-    </div>
+    
   )
 }
 
