@@ -24,9 +24,9 @@ const Admin = () => {
           <p><img src={logo} alt="" />Education</p>
           <div className="links">
             <Link
-              className={`ad_side_link ${activeLink === '/admin/adminhome' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/admin/adminhome')}
-              to='/admin/adminhome'
+              className={`ad_side_link ${activeLink === '/admin' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/admin')}
+              to='/admin'
             >
               <img src={home} alt="" />Главное
             </Link>
@@ -38,25 +38,29 @@ const Admin = () => {
               <img src={univer} alt="" />Университеты
             </Link>
             <Link
-            className={`ad_side_link ${activeLink === '/admin/adminstudent' ? 'active' : ''}`}
-            onClick={() => LinkOnClick('/admin/adminstudent')}
-            to='/admin/adminstudent'
-          >
-            <img src={users} alt="" />Студенты
-          </Link>
-          <Link
-            className={`ad_side_link ${activeLink === '/login' ? 'active' : ''}`}
-            onClick={() => LinkOnClick('/login')}
-            to='/login'
-          >
-            <img src={back} alt="" />Выйти
-          </Link>
-            
+              className={`ad_side_link ${activeLink === '/admin/adminstudent' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/admin/adminstudent')}
+              to='/admin/adminstudent'
+            >
+              <img src={users} alt="" />Студенты
+            </Link>
+            <Link
+              className={`ad_side_link ${activeLink === '/login' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/login')}
+              to='/login'
+            >
+              <img src={back} alt="" />Выйти
+            </Link>
+
           </div>
         </div>
-        <Outlet></Outlet>
       </div>
-      
+      <Outlet></Outlet>
+     <nav>
+      <h1>Admin</h1>
+     </nav>
+
+
 
     </>
 
