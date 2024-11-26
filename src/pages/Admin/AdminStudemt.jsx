@@ -3,7 +3,7 @@ import '../Admin/AdminStudent.css'
 const AdminStudemt = () => {
   return (
     <>
-      <h1>Admin Student</h1>
+      
     </>
   )
 }

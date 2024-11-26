@@ -8,25 +8,32 @@ import univer from '../Admin/images/univer.png'
 import AdminStudent from '../Admin/AdminStudemt'
 import back from '../Admin/images/logout.png'
 import './Admin.css'
+import AdminHome from './AdminHome'
 
 
-const Admin = () => {
-  const [activeLink, setActiveLink] = useState('/admin');
+
+
+
+function Admin() {
+  const [activeLink, setActiveLink] = useState('/admin')
 
   const LinkOnClick = (path) => {
-    setActiveLink(path);
-  };
+    setActiveLink(path)
+  }
 
   return (
     <>
+
+
+
       <div className="ad_page container">
         <div className="sidebar">
           <p><img src={logo} alt="" />Education</p>
           <div className="links">
             <Link
-              className={`ad_side_link ${activeLink === '/admin' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/admin')}
-              to='/admin'
+              className={`ad_side_link ${activeLink === '/admin/adminhome' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/admin/adminhome')}
+              to='/admin/adminhome'
             >
               <img src={home} alt="" />Главное
             </Link>
@@ -54,13 +61,9 @@ const Admin = () => {
 
           </div>
         </div>
+        <Outlet></Outlet>
       </div>
-      <Outlet></Outlet>
-     <nav>
-      <h1>Admin</h1>
-     </nav>
-
-
+      
 
     </>
 
