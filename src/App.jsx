@@ -9,10 +9,11 @@ import Mainuni from './pages/Universty/Mainuni'
 import AbInvoice from './pages/Universty/AbInvoice'
 import AbData from './pages/Universty/AbData'
 import AdminUniver from './pages/Admin/AdminUniver'
-import AdmminStudent from '../src/pages/Admin/AdminStudent'
-import AdminHome from '../src/pages/Admin/AdminHome'
+import AdmminStudent from './pages/Admin/AdminStudent'
+import AdminHome from './pages/Admin/AdminHome'
 import StudentUni from './pages/Student/StudentUni'
 import StudentAd from '../src/pages/Student/StudentAd'
+
 
 function App() {
   return (

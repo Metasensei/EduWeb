@@ -8,6 +8,7 @@ import univer from '../Admin/images/univer.png'
 import AdminStudent from '../Admin/AdminStudent'
 import back from '../Admin/images/logout.png'
 import './Admin.css'
+import AdminHome from './AdminHome'
 
 
 
@@ -60,10 +61,9 @@ function Admin() {
 
           </div>
         </div>
-        <Outlet/>
+        <Outlet></Outlet>
       </div>
-
-
+      
 
     </>
 

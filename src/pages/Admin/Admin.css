@@ -1,15 +1,12 @@
 
 
 .sidebar {
-    
     width: 20%;
     height: 100%;
     gap: 0px;
     opacity: 0px;
     background-color: #000D7F ;
     height: 100vh;
-    
-
 }
 .ad_page .sidebar p{
     color: white;
@@ -20,9 +17,6 @@
 .ad_page {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height:auto;
-    /* height: 1000px; */
 
 }
 
@@ -60,6 +54,7 @@
 
 }
 
+
 .links {
     display: flex;
     flex-direction: column;
@@ -75,6 +70,10 @@
     width: 34px;
     margin: 16px;
 }
+
+
+
+
 @media screen and (max-width: 1070px) {
     .ad_page span{
         display: none;
