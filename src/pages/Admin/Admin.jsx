@@ -27,7 +27,7 @@ function Admin() {
 
       <div className="ad_page container">
         <div className="sidebar">
-          <p><img src={logo} alt="" /><span>Education</span></p>
+          <p><img src={logo} className='educat' alt="" /><span>Education</span></p>
           <div className="links">
             <Link
               className={`ad_side_link ${activeLink === '/admin' ? 'active' : ''}`}
