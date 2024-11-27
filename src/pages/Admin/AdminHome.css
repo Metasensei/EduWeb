@@ -94,6 +94,16 @@ h5{
         color: #10CC9B;
     }
 }
+.chart-container{
+    margin-left: 40px;
+}   
+.select{
+    position: absolute;
+    left: 1100px;
+    top: 330px;
+    width: 200px;
+    height: 50px;
+}
 
 
 
