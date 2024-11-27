@@ -42,10 +42,10 @@ const AdminUniver = () => {
             <div className="adminuniver">
                 <nav>
                     <h1>Университеты</h1>
-                    <p>
+                    <span>
                         <img src={admin} className="admin" alt="" />
                         Nargiza Akhmedova
-                    </p>
+                    </span>
                 </nav>
 
                 <div className="vpn">
@@ -60,57 +60,7 @@ const AdminUniver = () => {
                     </div>
                 </div>
 
-                {isFilterVisible && (
-                    <>
-                        <div className="overlay" onClick={closeFilter}></div>
-                        <div className="filter-modal">
-                            <h3>Фильтр</h3>
-                            <label>
-                                <span>Выберите период:</span>
-                                <input type="date" />
-                                <input type="date" />
-                            </label>
-                            <label>
-                                <span>Выберите страну:</span>
-                                <select>
-                                    <option>Турция</option>
-                                    <option>Узбекистан</option>
-                                </select>
-                            </label>
-                            <label>
-                                <span>Выберите город:</span>
-                                <select>
-                                    <option>Анталия</option>
-                                    <option>Ташкент</option>
-                                </select>
-                            </label>
-                            <button onClick={closeFilter}>Применить</button>
-                        </div>
-                    </>
-                )}
-
-                <div className="idk">
-                    <div className="page1">
-                        <h1 className="h1">Название</h1>
-                        <h1 className="h2">Город</h1>
-                        <h1 className="h3">Срок</h1>
-                        <h1 className="h4">Статус</h1>
-                        <h1 className="h5">Информация</h1>
-                    </div>
-
-                    {filteredUniversities.map((uni) => (
-                        <div key={uni.id} className={uni.kartClass}>
-                            <h1 className="turk">{uni.name}</h1>
-                            <h1 className="ant">{uni.city}</h1>
-                            <h1 className="datr">{uni.date}</h1>
-                            <h1 className={uni.status === "Прием закрыт" ? "light1" : "light"}>
-                                {uni.status}
-                            </h1>
-                            <img src={und} className="uno" alt="" />
-                            
-                        </div>
-                    ))}
-                </div>
+              
             </div>
         </>
     );

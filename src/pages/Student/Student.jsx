@@ -1,8 +1,19 @@
 import React from 'react'
-import StudentUni from '../Student/StudentUni'
+import { Link, Outlet } from 'react-router-dom'
+import home from '../Admin/images/home.png'
+import logo from '../Admin/images/logo.png'
+import univer from '../Admin/images/univer.png'
+import users from '../Admin/images/2users.png'
+import back from '../Admin/images/logout.png'
 
-const Student = () => {
-  return (
+
+
+const LinkOnClick = (path) => {
+  setActiveLink(path)
+  }
+  const Student = () => {
+    const [activeLink, setActiveLink] = React.useState('/admin')
+    return (
     <div>
       <h1>student</h1>
       <div className="ad_page container">
@@ -11,15 +22,15 @@ const Student = () => {
           <div className="links">
             <Link
               className={`ad_side_link ${activeLink === '/student/studentuni' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/admin/adminhome')}
+              onClick={() => LinkOnClick('/student/studentuni')}
               to='/student/studentuni'
             >
-              <img src={home} alt="" />Главное
+              <img src={home} alt="" />Профиль
             </Link>
             <Link
               className={`ad_side_link ${activeLink === '/admin/adminuniver' ? 'active' : ''}`}
               onClick={() => LinkOnClick('/admin/adminuniver')}
-              to='/admin/adminuniver'
+              to='/'
             >
               <img src={univer} alt="" />Университеты
             </Link>
@@ -43,7 +54,7 @@ const Student = () => {
         <Outlet/>
       </div>
 
-
+<h1>ewf</h1>
 
     </div>
   )
