@@ -9,8 +9,10 @@ import Mainuni from './pages/Universty/Mainuni'
 import AbInvoice from './pages/Universty/AbInvoice'
 import AbData from './pages/Universty/AbData'
 import AdminUniver from './pages/Admin/AdminUniver'
-import AdmminStudent from '../src/pages/Admin/AdminStudemt'
+import AdmminStudent from './pages/Admin/AdminStudent'
 import AdminHome from './pages/Admin/AdminHome'
+import StudentUni from './pages/Student/StudentUni'
+import StudentAd from '../src/pages/Student/StudentAd'
 
 
 function App() {
@@ -19,11 +21,16 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path='/admin' element={<Admin />} >
-          <Route path='adminhome' element={<AdminHome />} />
+          <Route index element={<AdminHome />} />
           <Route path='adminuniver' element={<AdminUniver />} />
           <Route path='adminstudent' element={<AdmminStudent />} />
         </Route>
-        <Route path='/student' element={<Student />} />
+        <Route path='/student' element={<Student />} >
+          <Route path='studentuni' element={<StudentUni />} />
+          <Route path='studentad' element={<StudentAd />} />
+        </Route>
+        
+        
         <Route path='/universty' element={<Universty />} >
           <Route index element={<Mainuni />} />
           <Route path='abstudent' element={<AbStudents />} />

@@ -1,92 +1,55 @@
 .adminuniver{
-    width: 1110px;
-    height: 100%;
+    width: 80%;border: 1px solid red;
+
 }
 .adminuniver nav{
-    width: 100%;
-    height: 80px;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 0 50px;
-    font-family: Raleway;
     justify-content: space-between;
+    padding: 30px;
 }
-.adminuniver nav p{
-    color: black;
-    font-family: Raleway,sans-serif;
+.adminuniver nav h1{
+    /* Университеты */
+
+
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 31px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.adminuniver nav span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Raleway';
+
+
+
+
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+color: #000000;
+
 
 }
 .admin-src{
+    width: 900px;
+    height: 60px;
+    border-radius: 10px;
     border: none;
-    margin-left: 50px;
-    padding-left: 25px;
-    width: 500px;
-}
-.adminuniver  .search .h1{
-    font-family: Raleway,sans-serif;
-}
-.h1{
-    font-size: 15px;
-    margin-right: 200px
-}
-.h2{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-right: -35px;
-}
-.h3{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-left: 150px;
-    margin-right: 190px;
-}
-.h4{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-right: 50px;
-}
-.h5{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-left: 150;
-    
-}
-
-.idk{
-    margin-left: 50px;
-    margin-top: 25px;
-    padding-left: 25px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 400px;
-    align-items: left;
-}
-.page1{
-    display: flex;
-    border-bottom: 2px solid black;
-    padding-top: 20px;
-}
-.page2{
-    display: flex;
-}
-.turk{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-left: 30px;
-}
-.ant{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-top: 20px;
-    color: rgb(61, 60, 60);
-    margin-right: 70px;
-}
-.datr{
-    font-family: Raleway,sans-serif;
-    font-size: 17px;
-    margin-right: 435px;
-    color: black;
-    margin-top: 20px;
+    box-shadow: 4px 6px 10px 0px #0000001A;
+    box-shadow: 0px -2px 8px 0px #00000017;
 }

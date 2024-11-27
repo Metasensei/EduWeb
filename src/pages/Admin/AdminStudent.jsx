@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Admin/AdminStudent.css'
-const AdminStudemt = () => {
+const AdminStudent = () => {
   return (
     <>
       
@@ -8,4 +8,4 @@ const AdminStudemt = () => {
   )
 }
 
-export default AdminStudemt
+export default AdminStudent

@@ -1,23 +1,18 @@
 
 
 .sidebar {
-            
-    
-    width: 290px;
+    width: 20%;
     height: 100%;
     gap: 0px;
     opacity: 0px;
     background-color: #000D7F ;
-    
-
+    height: 100vh;
 }
 
 .ad_page {
     display: flex;
     flex-direction: row;
-    width: 1440px;
-    height: 1500px;
-   
+
 }
 
 .ad_page .sidebar .links .active {
@@ -65,25 +60,23 @@
 
 }
 
-p {
-    font-family: Raleway;
-    font-size: 15.43px;
-    font-weight: 600;
-    line-height: 18.11px;
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
-}
 .ad_page p img {
     width: 34px;
     margin: 16px;
 }
-.container{
-    max-width: 1440px;
-    margin: 0 auto;
 
+
+
+
+@media screen and (max-width: 1070px) {
+    .ad_page span{
+        display: none;
+    }
+    .ad_page .sidebar{
+        width: 80px !important;
+    }
+    .adminuniver{
+        width: 100%;
+    }
 }
-
