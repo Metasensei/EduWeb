@@ -5,10 +5,33 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { PieChart, Pie, Cell, Tooltip, BarChart, Bar, XAxis, CartesianGrid, YAxis, ResponsiveContainer, Legend, Line, LineChart } from 'recharts';
 import './AdminHome.css';
+import { Doughnut } from "react-chartjs-2";
 const data = [
   { name: 'Men', value: 800 },
   { name: 'Women', value: 650 },
 ];
+const genderData = {
+  labels: ["Erkaklar", "Ayollar"],
+  datasets: [
+    {
+      label: "Talabalar bo'yicha",
+      data: [450, 500],
+      backgroundColor: ["#36A2EB", "#FF6384"],
+      hoverOffset: 4,
+    },
+  ],
+};
+const languageData = {
+  labels: ["Rus tili", "Turk tili", "O‘zbek tili"],
+  datasets: [
+    {
+      label: "Ta'lim tillari bo'yicha",
+      data: [450, 500, 500],
+      backgroundColor: ["#36A2EB", "#FF6384", "#FFCE56"],
+      hoverOffset: 4,
+    },
+  ],
+};
 const line_data = [
   { name: 'Янв', Студенты: 30, Университеты: 0, Страны: 5, Факультеты: 10 },
   { name: 'Мар', Студенты: 29, Университеты: 10, Страны: 10, Факультеты: 30 },
@@ -16,6 +39,12 @@ const line_data = [
   { name: 'Сен', Студенты: 56, Университеты: 35, Страны: 10, Факультеты: 56 },
   { name: 'Дек', Студенты: 60, Университеты: 50, Страны: 9, Факультеты: 50 }
 ];
+const data2 = [
+  { name: 'English', value: 400 },
+  { name: 'Russian', value: 350 },
+  { name: 'Korean', value: 150 },
+];
+const COLORS2 = ['#000D7F', '#EF476F', '#FCCA58', '#10CC9B'];
 const line_colors = {
   Студенты: '#000D7F',
   Университеты: '#EF476F',
@@ -37,7 +66,7 @@ const AdminHome = () => {
       <div className='ad_home'>
         <nav>
           <h1>Главное</h1>
-          <p><img src={admin} alt="" />Nargiza Akhmedova</p>
+          <span><img src={admin} alt="" />Nargiza Akhmedova</span>
         </nav>
         <div className='ad_cards'>
           <div className='ad_card1 ad-card'>
@@ -57,88 +86,51 @@ const AdminHome = () => {
             <h5>740</h5>
           </div>
         </div>
-        <div className="chart-container_admin">
-          <h3 className='dynamic-change_admin' style={{ textAlign: 'left', marginBottom: '20px', }}>Динамика роста или спада</h3>
-          <div className='select_admin'>
-            <Select
-              value={selectedLine}
-              onChange={handleLineChange}
-              displayEmpty
-              style={{ width: '200px', border: 'none', outline: 'none', }}
-            >
-              <MenuItem value="all">Показать все</MenuItem>
-              <MenuItem value="Студенты">Студенты</MenuItem>
-              <MenuItem value="Университеты">Университеты</MenuItem>
-              <MenuItem value="Страны">Страны</MenuItem>
-              <MenuItem value="Факультеты">Факультеты</MenuItem>
-            </Select>
+        <div className="chart-container" >
+          <div className="chart-top">
+            <h3 className='dynamic-change' style={{ textAlign: 'left', marginBottom: '20px', }}>Динамика роста или спада</h3>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '10px' }}>
+              <Select
+                value={selectedLine}
+                onChange={handleLineChange}
+                displayEmpty
+                style={{ width: '150px', height: '40px', border: 'none', outline: 'none', }}
+              >
+                <MenuItem value="all">Показать все</MenuItem>
+                <MenuItem value="Студенты">Студенты</MenuItem>
+                <MenuItem value="Университеты">Университеты</MenuItem>
+                <MenuItem value="Страны">Страны</MenuItem>
+                <MenuItem value="Факультеты">Факультеты</MenuItem>
+              </Select>
+            </div>
           </div>
 
-          <div className="R-container_admin">
-            <ResponsiveContainer width="100%" height={400}>
-              <LineChart data={line_data}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
+          <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={line_data}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
 
-
-                {(selectedLine === 'all' || selectedLine === 'Студенты') && (
-                  <Line type="monotone" dataKey="Студенты" stroke={line_colors.Студенты} strokeWidth={2} />
-                )}
-                {(selectedLine === 'all' || selectedLine === 'Университеты') && (
-                  <Line type="monotone" dataKey="Университеты" stroke={line_colors.Университеты} strokeWidth={2} />
-                )}
-                {(selectedLine === 'all' || selectedLine === 'Страны') && (
-                  <Line type="monotone" dataKey="Страны" stroke={line_colors.Страны} strokeWidth={2} />
-                )}
-                {(selectedLine === 'all' || selectedLine === 'Факультеты') && (
-                  <Line type="monotone" dataKey="Факультеты" stroke={line_colors.Факультеты} strokeWidth={2} />
-                )}
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
+              {/* Lines with conditional rendering based on selected filter */}
+              {(selectedLine === 'all' || selectedLine === 'Студенты') && (
+                <Line type="monotone" dataKey="Студенты" stroke={line_colors.Студенты} strokeWidth={2} />
+              )}
+              {(selectedLine === 'all' || selectedLine === 'Университеты') && (
+                <Line type="monotone" dataKey="Университеты" stroke={line_colors.Университеты} strokeWidth={2} />
+              )}
+              {(selectedLine === 'all' || selectedLine === 'Страны') && (
+                <Line type="monotone" dataKey="Страны" stroke={line_colors.Страны} strokeWidth={2} />
+              )}
+              {(selectedLine === 'all' || selectedLine === 'Факультеты') && (
+                <Line type="monotone" dataKey="Факультеты" stroke={line_colors.Факультеты} strokeWidth={2} />
+              )}
+            </LineChart>
+          </ResponsiveContainer>
         </div>
-        <div className="chart-cont_admin">
-          <div className="chart-box_admin">
-            <h3 className='chart-name'>Студенты по полу</h3>
-            <div className="chart-inner">
-              <PieChart width={188} height={188}>
-                <Pie
 
-                  data={data}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={60}
-                  outerRadius={94}
-                  dataKey="value"
-                  paddingAngle={5}
-                >
-                  {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-              <div style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                fontSize: '20px',
-                fontWeight: 'bold'
-              }}>
-                {total}
-              </div>
-            </div>
-            <div className="gibrid">
-            </div>
-          </div>
         
-        </div>
-
-
 
 
       </div>

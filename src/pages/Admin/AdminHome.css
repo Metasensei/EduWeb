@@ -1,153 +1,154 @@
+.ad_home {
+ 
+    max-width: 80%;
+}
 
-.admincards{
+.ad_home nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-    padding: 0 40px;
-    font-family: Raleway;
-    color: black;
+    justify-content: space-between;
+    padding: 30px;
 }
-nav h1{
+
+.ad_home nav h1 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
     font-size: 26px;
+    line-height: 31px;
+    color: #000000;
 }
-nav p{
-    color: black;
+
+.ad_home nav span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
     font-size: 16px;
+    line-height: 19px;
+    color: #000000;
 }
 
-.ad_home{
-    width: 1075px;
-    height: 100%;
+.ad_home nav img {
+    width: 40px;
 }
 
-.ad_cards{
+.ad_cards {
     margin-bottom: 50px;
-    padding: 0 20px;
+    color: black;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-   }
-   .ad-card{
+
+}
+
+.ad-card {
     display: flex;
     background-color: #FFFFFF;
     flex-direction: column;
     align-items: center;
     border-left: 7px solid;
-    width: 250px;
-    height: 158px;
+    width: 225px;
+    height: 100px;
     border-radius: 14px;
     margin: 18px;
     box-shadow: 2px 4px 9px 0px #0000001A;
     box-shadow: 0px -2px 8px 0px #00000017;
     justify-content: space-between;
     padding: 30px 0;
+}
 
-    
-
-  }
-.ad-card  p{
+.ad_home .ad_cards .ad-card p {
     font-family: Raleway;
-font-size: 22px;
-font-weight: 600;
-line-height: 0px;
-letter-spacing: 0.02em;
-color:  rgba(0, 18, 26, 1);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.02em;
 
 }
-h5{
+
+h5 {
     font-family: 'Raleway';
     font-size: 35px;
     font-weight: 600;
     line-height: 0px;
     letter-spacing: 0.02em;
-    padding-bottom: 45px;
+    margin-bottom: 40px;
 
 }
-.ad_card1{
+
+.ad_card1 {
     border-left: 7px solid #000D7F;
-    h5{
+
+    h5 {
         color: #000D7F;
     }
 }
-.ad_card2{
-    border-left: 7px solid #E96383;
-    h5{
-        color: #E96383;
-    }
 
-}
-.ad_card3{
+.ad_card2 {
     border-left: 7px solid #FCCA58;
-    h5{
+
+    h5 {
         color: #FCCA58;
     }
-   
 }
-.ad_card4{
+
+.ad_card3 {
     border-left: 7px solid #10CC9B;
-    h5{
+
+    h5 {
         color: #10CC9B;
     }
 }
-.chart-container_admin{
-    margin-left: 40px;
-    font-family: Raleway,sans-serif;
-    box-shadow: 2px 4px 9px 0px #0000001A;
-    box-shadow: 0px -2px 8px 0px #00000017;
-    border-radius: 8px;
-    background-color: #ffffff;
+
+.ad_card4 {
+    border-left: 7px solid #E96383;
+
+    h5 {
+        color: #E96383;
+    }
+}
+
+.ad_home .chart-container {
+    margin: 30px;
+    width: 990px;
     padding: 20px;
-    width: 1000px;
-}   
-.select_admin{
-    position: absolute;
-    left: 1100px;
-    top: 330px;
-    width: 200px;
-    height: 50px;
-    margin-bottom: 10px;
-    justify-content: flex-end;
-    display: flex
-}
-.dynamic-change_admin{
-    font-size: 25px;
-    margin-left: 40px;
-}
-.chart-box_admin{
-    width: 430px;
-    height: 336px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    text-align: center;
-    box-shadow: 2px 4px 9px 0px #0000001A;
-    box-shadow: 0px -2px 8px 0px #00000017;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    margin-left: 41px;
-    margin-top: 25px;
-}
-.chart-inner{
-     left: 470px;
-     position: absolute;
+    height: auto;
+    border-radius: 8px;
+
 
 }
-  .chart-name{
-    font-family: Raleway;
+
+.ad_home .chart-top {
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad_home .chart-container .chart-top h3 {
+    margin-top: -30px;
+}
+.ad_home .chart-cont .chart-name1{
+    font-family: 'Raleway';
     font-size: 22px;
     font-weight: 600;
     line-height: 25.83px;
     letter-spacing: 0.02em;
     text-align: left;
     position: absolute;
-    top: 850px;
-    left: 350px;
+    left: 320px;
+    top:880px;
 
-}
+  }
+  .ad_home .chart-cont .chart-inner1{
+    position: absolute;
+    left: -130px;
+    top: 20px;
 
-
+      }
 
