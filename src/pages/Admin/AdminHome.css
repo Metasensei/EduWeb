@@ -1,9 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .admincards{
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    font-family: Raleway;
+    color: black;
 }
+nav h1{
+    font-size: 26px;
+}
+nav p{
+    color: black;
+    font-size: 16px;
+}
+
+.ad_home{
+    width: 1075px;
+    height: 100%;
+}
+
+.ad_cards{
+    margin-bottom: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+   }
+   .ad-card{
+    display: flex;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    border-left: 7px solid;
+    width: 250px;
+    height: 158px;
+    border-radius: 14px;
+    margin: 18px;
+    box-shadow: 2px 4px 9px 0px #0000001A;
+    box-shadow: 0px -2px 8px 0px #00000017;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    
+
+  }
+.ad-card  p{
+    font-family: Raleway;
+font-size: 22px;
+font-weight: 600;
+line-height: 0px;
+letter-spacing: 0.02em;
+color:  rgba(0, 18, 26, 1);
+
+}
+h5{
+    font-family: 'Raleway';
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+    padding-bottom: 45px;
+
+}
+.ad_card1{
+    border-left: 7px solid #000D7F;
+    h5{
+        color: #000D7F;
+    }
+}
+.ad_card2{
+    border-left: 7px solid #E96383;
+    h5{
+        color: #E96383;
+    }
+
+}
+.ad_card3{
+    border-left: 7px solid #FCCA58;
+    h5{
+        color: #FCCA58;
+    }
+   
+}
+.ad_card4{
+    border-left: 7px solid #10CC9B;
+    h5{
+        color: #10CC9B;
+    }
+}
+.chart-container_admin{
+    margin-left: 40px;
+    font-family: Raleway,sans-serif;
+    box-shadow: 2px 4px 9px 0px #0000001A;
+    box-shadow: 0px -2px 8px 0px #00000017;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 1000px;
+}   
+.select_admin{
+    position: absolute;
+    left: 1100px;
+    top: 330px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    display: flex
+}
+.dynamic-change_admin{
+    font-size: 25px;
+    margin-left: 40px;
+}
+.chart-box_admin{
+    width: 430px;
+    height: 336px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 2px 4px 9px 0px #0000001A;
+    box-shadow: 0px -2px 8px 0px #00000017;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 41px;
+    margin-top: 25px;
+}
+.chart-inner{
+     left: 470px;
+     position: absolute;
+
+}
+  .chart-name{
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25.83px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    position: absolute;
+    top: 850px;
+    left: 350px;
+
+}
+
+
+
