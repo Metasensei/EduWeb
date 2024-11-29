@@ -12,11 +12,17 @@ import './Student.css'
 import qizrasmi from './images/qizrasmi.png'
 import bildirma from './images/bildirma.png'
 import nastroy from './images/Setting.png'
-
+import downno from '../Admin/images/download.png'
 import primg from './images/prfim.png'
 const Student = () => {
+
   const [activeLink, setActiveLink] = useState('/admin');
   const location = useLocation();
+
+
+
+
+
 
   const LinkOnClick = (path) => {
     setActiveLink(path);
@@ -97,6 +103,7 @@ const Student = () => {
          <div className="primg">
           <img src={primg} alt="" />
           <h2>Nargiza Akhmedova</h2>
+          
          </div>
 
 
@@ -105,8 +112,9 @@ const Student = () => {
             </div>
          <div className='infotmation'>
           <div className='stage1'>
-            <h1>Имя</h1>
-            <h1>Нафиса</h1>
+            <h1 className='xp1'>Имя</h1>
+            <h1 className='fx1'>Нафиса</h1>
+            <a href="">Изменить</a>
           </div>
 
           <div className='stage2'>
@@ -120,23 +128,41 @@ const Student = () => {
           </div>
 
           <div className='stage5'>
-              <h1 className="">Университет</h1>
-              <h1 className="">Омская гуманитарная академия</h1>
+              <h1 className="np1">Университет</h1>
+              <h1 className="np2">Омская гуманитарная академия</h1>
           </div>
           <div className='stage6'>
-          <h1 className="we1">Факультет</h1>
-                    <h1 className="we2">Педагогическое образование (с двумя профилями подготовки) (уровень <br /> бакалавриата))
-                  </h1>
+                    <h1 className="we1">Факультет</h1>
+                    <h1 className="we2">Педагогическое образование (c двумя профилями подготовки) (уровень <br /> бакалавриата)</h1>
           </div>
-          </div> 
-
+            <div className='stage7'>
+                    <h1 className="win1">Специальность</h1>
+                    <h1 className="win2">Начальное образование и иностранный язык английский язык</h1>
           </div>
+          
+          <div className='stage8'>
+                    <h1 className="pass">Паспорт</h1>
+                    <img src={downno} className="pass1" alt="" />
+          </div>
+          <div className='stage9'>
+                    <h1 className="din1">Диплом</h1>
+                    <img src={downno} className="win1" alt="" />
+          </div>
+          </div>
+</div>
+          
         )}
 
-        <Outlet />
+        <Outlet/>
       </div>
     </>
   );
 };
 
+
 export default Student;
+
+
+
+      
+    

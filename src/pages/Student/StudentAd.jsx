@@ -2,9 +2,10 @@ import React from 'react'
 
 const StudentAd = () => {
   return (
-    <div>studentAd</div>
+<>
 
-    
+<div>studentAd</div>
+</>
   )
 }
 

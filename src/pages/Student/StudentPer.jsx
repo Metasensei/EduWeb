@@ -3,6 +3,8 @@ import React from 'react'
 import './StudentPer.css'
 import rasm from './images/kichikrasm.png'
 
+import '../Student/StudentPer.css'
+
 const StudentPer = () => {
   return (
     
