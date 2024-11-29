@@ -104,7 +104,10 @@ const Student = () => {
 
             </div>
          <div className='infotmation'>
-          
+          <div className='stage1'>
+            <h1>Имя</h1>
+            <h1>Нафиса</h1>
+          </div>
           </div> 
 
           </div>
