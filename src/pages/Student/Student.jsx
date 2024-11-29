@@ -16,8 +16,7 @@ const Student = () => {
 
 
 
-const LinkOnClick = (path) => {
-  setActiveLink(path)
+
 
   const LinkOnClick = (path) => {
     setActiveLink(path)
@@ -82,6 +81,5 @@ const LinkOnClick = (path) => {
 
 
     
-}
-export default Student
+export default Student;
 

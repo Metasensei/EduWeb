@@ -27,9 +27,10 @@ function App() {
           <Route path='adminstudent' element={<AdmminStudent />} />
         </Route>
         <Route path='/student' element={<Student />} >
-          <Route path='studentuni' element={<StudentUni />} />
+          <Route index element={<StudentUni />} />
           <Route path='studentper' element={<StudentPer />} />
-          <Route path='studente' element={<StudentE/>}/>
+          <Route path='studente' element={<StudentE />} />
+          <Route path='studentuni' element={<StudentUni />} />
         </Route>
         
         
