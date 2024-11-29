@@ -108,6 +108,26 @@ const Student = () => {
             <h1>Имя</h1>
             <h1>Нафиса</h1>
           </div>
+
+          <div className='stage2'>
+          <h1 className="m1">Фамилия</h1>
+          <h1 className="m2">Абдураимова</h1>
+          </div>
+
+          <div className='stage3'>
+            <h1 className="st1">Отчество</h1>
+            <h1 className="st2">Зафар кизи</h1>
+          </div>
+
+          <div className='stage5'>
+              <h1 className="">Университет</h1>
+              <h1 className="">Омская гуманитарная академия</h1>
+          </div>
+          <div className='stage6'>
+          <h1 className="we1">Факультет</h1>
+                    <h1 className="we2">Педагогическое образование (с двумя профилями подготовки) (уровень <br /> бакалавриата))
+                  </h1>
+          </div>
           </div> 
 
           </div>
