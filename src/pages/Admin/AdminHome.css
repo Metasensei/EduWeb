@@ -113,12 +113,13 @@ h5 {
 }
 
 .ad_home .chart-container {
-    margin: 30px;
+    margin: 0px 24px;
     width: 990px;
     padding: 20px;
     height: auto;
     border-radius: 8px;
-
+    margin-top: -30px;
+    
 
 }
 
@@ -133,22 +134,19 @@ h5 {
 .ad_home .chart-container .chart-top h3 {
     margin-top: -30px;
 }
-.ad_home .chart-cont .chart-name1{
+.ad_home .chart-cont .chart-name{
     font-family: 'Raleway';
     font-size: 22px;
     font-weight: 600;
     line-height: 25.83px;
     letter-spacing: 0.02em;
     text-align: left;
-    position: absolute;
-    left: 320px;
-    top:880px;
-
-  }
-  .ad_home .chart-cont .chart-inner1{
-    position: absolute;
-    left: -130px;
-    top: 20px;
-
-      }
+    
+}
+.ad_home .chart-cont{
+    width: 1030px;
+    margin-left: 30px;
+   gap: 20px;
+   margin-top: 20px;
+}
 

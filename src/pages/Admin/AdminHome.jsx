@@ -10,28 +10,7 @@ const data = [
   { name: 'Men', value: 800 },
   { name: 'Women', value: 650 },
 ];
-const genderData = {
-  labels: ["Erkaklar", "Ayollar"],
-  datasets: [
-    {
-      label: "Talabalar bo'yicha",
-      data: [450, 500],
-      backgroundColor: ["#36A2EB", "#FF6384"],
-      hoverOffset: 4,
-    },
-  ],
-};
-const languageData = {
-  labels: ["Rus tili", "Turk tili", "O‘zbek tili"],
-  datasets: [
-    {
-      label: "Ta'lim tillari bo'yicha",
-      data: [450, 500, 500],
-      backgroundColor: ["#36A2EB", "#FF6384", "#FFCE56"],
-      hoverOffset: 4,
-    },
-  ],
-};
+
 const line_data = [
   { name: 'Янв', Студенты: 30, Университеты: 0, Страны: 5, Факультеты: 10 },
   { name: 'Мар', Студенты: 29, Университеты: 10, Страны: 10, Факультеты: 30 },
@@ -129,6 +108,91 @@ const AdminHome = () => {
             </LineChart>
           </ResponsiveContainer>
         </div>
+        <div className='chart-cont'  >
+        <div className='chart-don' style={{
+          width: '530px',
+          height: '336px',
+          borderRadius: '14px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#ffffff',
+          textAlign: 'center'
+        }}>
+          <h3 className='chart-name'>Студенты по полу</h3>
+          <div className='chart-inner' style={{ position: 'relative' }}>
+            <PieChart width={188} height={188}>
+              <Pie
+                data={data}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={94}
+                dataKey="value"
+                paddingAngle={5}
+              >
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              fontSize: '20px',
+              fontWeight: 'bold'
+            }}>
+              {total}
+            </div>
+          </div>
+        </div>
+
+        {/* Pie Chart 2: Языки обучения университетов */}
+        <div className='chart-don' style={{
+          width: '530px',
+          height: '336px',
+          borderRadius: '14px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#ffffff',
+          textAlign: 'center'
+        }}>
+          <h3 className='chart-name'>Языки обучения университетов</h3>
+          <div className='chart-inner' style={{ position: 'relative' }}>
+            <PieChart width={188} height={188}>
+              <Pie
+                data={data2}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={94}
+                dataKey="value"
+                paddingAngle={5}
+              >
+                {data2.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS2[index % COLORS2.length]} />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              fontSize: '20px',
+              fontWeight: 'bold'
+            }}>
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+          
 
         
 

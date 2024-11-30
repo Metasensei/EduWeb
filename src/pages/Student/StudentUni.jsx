@@ -2,7 +2,7 @@ import React from 'react'
 
 const StudentUni = () => {
   return (
-    <div>StudentUni</div>
+    <div>StudentUni hiwfffffffffffffffffffffffffffffffffffffffffffffffffffffff</div>
   )
 }
 

@@ -1,63 +1,87 @@
+import { useState } from 'react'
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-import home from '../Admin/images/home.png'
+import { Link,Outlet } from 'react-router-dom'
 import logo from '../Admin/images/logo.png'
-import univer from '../Admin/images/univer.png'
+import home from '../Admin/images/home.png'
 import users from '../Admin/images/2users.png'
+import univer from '../Admin/images/univer.png'
+import AdminStudent from '../Admin/AdminStudent'
 import back from '../Admin/images/logout.png'
+import docu from '../Student/images/Document.png'
+import Profile from '../Student/images/Profile.png'
+
+
+const Student = () => {
+  const [activeLink, setActiveLink] = useState('/admin')
 
 
 
 const LinkOnClick = (path) => {
   setActiveLink(path)
+
+  const LinkOnClick = (path) => {
+    setActiveLink(path)
+
   }
-  const Student = () => {
-    const [activeLink, setActiveLink] = React.useState('/admin')
-    return (
-    <div>
-      <h1>student</h1>
+  return (
+    <>
       <div className="ad_page container">
         <div className="sidebar">
-          <p><img src={logo} alt="" />Education</p>
+          <p><img src={logo} className='educat' alt="" /><span>Education</span></p>
           <div className="links">
+            <Link
+              className={`ad_side_link ${activeLink === '/student/' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/student/')}
+              to='/student/'
+            >
+              <img src={Profile} alt="" /><span>Профиль</span>
+            </Link>
             <Link
               className={`ad_side_link ${activeLink === '/student/studentuni' ? 'active' : ''}`}
               onClick={() => LinkOnClick('/student/studentuni')}
               to='/student/studentuni'
             >
-              <img src={home} alt="" />Профиль
+              <img src={univer} alt="" /><span>Университеты</span>
             </Link>
             <Link
-              className={`ad_side_link ${activeLink === '/admin/adminuniver' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/admin/adminuniver')}
+              className={`ad_side_link ${activeLink === '/student/studentper' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/student/studentper')}
+              to='/student/studentper'
+            >
+              <img src={users} alt="" /><span>Персональный <br />
+              менеджер</span>
+            </Link>
+            <Link
+              className={`ad_side_link ${activeLink === '/student/studente' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/student/studente')}
+              to='/student/studente'
+            >
+              <img src={docu} alt="" /><span>E-Договор</span>
+            </Link>
+            <Link
+              className={`ad_side_link ${activeLink === '/' ? 'active' : ''}`}
+              onClick={() => LinkOnClick('/')}
               to='/'
             >
-              <img src={univer} alt="" />Университеты
-            </Link>
-            <Link
-              className={`ad_side_link ${activeLink === '/admin/adminstudent' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/admin/adminstudent')}
-              to='/admin/adminstudent'
-            >
-              <img src={users} alt="" />Студенты
-            </Link>
-            <Link
-              className={`ad_side_link ${activeLink === '/login' ? 'active' : ''}`}
-              onClick={() => LinkOnClick('/login')}
-              to='/login'
-            >
-              <img src={back} alt="" />Выйти
+              <img src={back} alt="" /><span>Выйти</span>
             </Link>
 
           </div>
         </div>
-        <Outlet/>
+        <Outlet></Outlet>
       </div>
 
-<h1>ewf</h1>
 
-    </div>
+
+      
+    
+</>
   )
 }
+ 
 
+
+    
+}
 export default Student
+
