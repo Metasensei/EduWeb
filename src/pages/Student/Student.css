@@ -6,7 +6,8 @@
     gap: 0px;
     opacity: 0px;
     background-color: #000D7F ;
-    height: 100vh;
+    height: 1600px;
+    
 }
 .ad_page .sidebar p{
     color: white;
@@ -62,7 +63,6 @@
     gap: 20px;
     margin-top: 50px;
 
-
 }
 
 
@@ -84,4 +84,69 @@
     .adminuniver{
         width: 100%;
     }
+}
+
+.profilee{
+    width: 1151px;
+    height: 325px;
+    background-image: url(./images/qizrasmi.png);
+    position: relative;
+    right: 8px;
+}
+.profilee h2{
+    margin-left: 30px;
+    position: relative;
+    color: white;
+    top: 20px;
+}
+.images{
+    display: flex;
+    margin-left: 1000px;
+    gap: 20px;
+}
+.primg img{
+    margin-left: 490px;
+}
+.primg h2 {
+    margin-left: 455px;
+}
+.infotmation{
+    width:1091px ;
+    height: 728px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 6px solid whitesmoke;
+ 
+    border-radius: 8px;
+    box-shadow: white 50px;
+}
+.custom-content{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sinny{
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 600;
+font-size: 23px;
+line-height: 28px;
+color: #000000;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 25px;
+margin-right: 800px;
+}
+.nan{
+    margin-top: 20px;
+    margin-bottom: 20px;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.02em;
+color: #000D7F;
+
+}
+.sukun{
+    display: flex;
 }
