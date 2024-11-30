@@ -26,10 +26,17 @@ function App() {
           <Route path='adminuniver' element={<AdminUniver />} />
           <Route path='adminstudent' element={<AdmminStudent />} />
         </Route>
+
+
+
+ 
+
         <Route path='/student' element={<Student />} >
-          <Route path='studentuni' element={<StudentUni />} />
+      
           <Route path='studentper' element={<StudentPer />} />
-          <Route path='studente' element={<StudentE/>}/>
+          <Route path='studente' element={<StudentE />} />
+          <Route path='studentuni' element={<StudentUni />} />
+
         </Route>
         
         
@@ -42,6 +49,7 @@ function App() {
         <Route path='/login' element={<h1>Login</h1>} />
         <Route path='*' element={<h1>404 error</h1>} />
       </Routes>
+      
     </>
   )
 }

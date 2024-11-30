@@ -1,8 +1,24 @@
 import React from 'react'
 
+import './StudentPer.css'
+import rasm from './images/kichikrasm.png'
+
+import '../Student/StudentPer.css'
+
 const StudentPer = () => {
   return (
-    <div>StudentPer</div>
+    
+   <>
+    <h2>Персональный менеджер</h2>
+        <div className='Toggle-Page'>
+       
+        <img src={rasm} alt="" />
+        <h3>Nargiza Akhmedova</h3>
+
+        </div>
+
+   </> 
+ 
   )
 }
 
