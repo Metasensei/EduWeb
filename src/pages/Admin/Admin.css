@@ -2,11 +2,20 @@
 
 .sidebar {
     width: 20%;
-    height: 100%;
-    gap: 0px;
-    opacity: 0px;
+    height: auto;
+
     background-color: #000D7F ;
-    height: 100vh;
+    
+}
+.sidebar p{
+    width: 100%;
+    height: 80px;
+    font-size: 16px;
+    font-family: 'Raleway';
+    color: white;
+    display: flex;
+    align-items: center;
+
 }
 .ad_page .sidebar p{
     color: white;
@@ -60,7 +69,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 70px;
 
 
 }

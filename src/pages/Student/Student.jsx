@@ -14,7 +14,7 @@ import primg from './images/prfim.png';
 import downno from '../Admin/images/download.png';
 
 const Student = () => {
-  const [activeLink, setActiveLink] = useState('/student/');
+  const [activeLink, setActiveLink] = useState('/admin');
   const location = useLocation();
 
   const handleLinkClick = (path) => {
@@ -24,7 +24,6 @@ const Student = () => {
   return (
     <>
       <div className="ad_page container">
-        {/* Sidebar */}
         <div className="sidebar">
           <p>
             <img src={logo} className="educat" alt="Education Logo" />
@@ -53,10 +52,7 @@ const Student = () => {
               to="/student/studentper"
             >
               <img src={users} alt="Users Icon" />
-              <span>
-                Персональный <br />
-                менеджер
-              </span>
+              <span>Персональный менеджер</span>
             </Link>
             <Link
               className={`ad_side_link ${activeLink === '/student/studente' ? 'active' : ''}`}
@@ -77,7 +73,6 @@ const Student = () => {
           </div>
         </div>
 
-        {/* Content for /student/ */}
         {location.pathname === '/student/' && (
           <div className="custom-content">
             <div className="profilee">
@@ -93,58 +88,46 @@ const Student = () => {
             </div>
 
             <div className="infotmation">
-
-            <div className='sukun'>
-              <h1 className='sinny'>Ваши данные</h1>
-              <h1 className='nan'>Изменить</h1>
-            </div>
-
               <div className="stage1">
                 <h1 className="xp1">Имя</h1>
                 <h1 className="fx1">Нафиса</h1>
+                <a href="">Изменить</a>
               </div>
-
               <div className="stage2">
                 <h1 className="m1">Фамилия</h1>
                 <h1 className="m2">Абдураимова</h1>
               </div>
-
               <div className="stage3">
                 <h1 className="st1">Отчество</h1>
                 <h1 className="st2">Зафар кизи</h1>
               </div>
-
               <div className="stage5">
                 <h1 className="np1">Университет</h1>
                 <h1 className="np2">Омская гуманитарная академия</h1>
               </div>
-
               <div className="stage6">
                 <h1 className="we1">Факультет</h1>
                 <h1 className="we2">
-                  Педагогическое образование (с двумя профилями подготовки) (уровень <br /> бакалавриата)
+                  Педагогическое образование (с двумя профилями подготовки) (уровень <br />
+                  бакалавриата)
                 </h1>
               </div>
-
               <div className="stage7">
                 <h1 className="win1">Специальность</h1>
-                <h1 className="win2">Начальное образование и иностранный язык (английский язык</h1>
+                <h1 className="win2">Начальное образование и иностранный язык (английский язык)</h1>
               </div>
-
               <div className="stage8">
                 <h1 className="pass">Паспорт</h1>
-                <img src={downno} className="pass1" alt="" />
+                <img src={downno} className="pass1" alt="Passport Icon" />
               </div>
-
               <div className="stage9">
                 <h1 className="din1">Диплом</h1>
-                <img src={downno} className="win1" alt="" />
+                <img src={downno} className="win1" alt="Diploma Icon" />
               </div>
             </div>
           </div>
         )}
 
-        {/* Outlet for other routes */}
         <Outlet />
       </div>
     </>
