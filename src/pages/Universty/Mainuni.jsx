@@ -82,22 +82,22 @@ const Mainuni = () => {
             </div>
           </div>
         </div>
-          <div className='ab-cards'>
-                <div className='ab-card1 ab-card'>
-                  <p>Студенты</p>
-                  <h5>1424</h5>
+          <div className='main-menu-cards'>
+                <div className='card-menu card-menu1'>
+                  <p className='title-card'>Студенты</p>
+                  <p className='number-card'>1424</p>
                 </div>
-                <div className='ab-card2 ab-card'>
-                  <p>Инвойсы</p>
-                  <h5>80</h5>
+                <div className='card-menu card-menu2'>
+                  <p className='title-card'>Инвойсы</p>
+                  <p className='number-card'>80</p>
                 </div>
-                <div className='ab-card3 ab-card'>
-                  <p>Поступившие</p>
-                  <h5>52</h5>
+                <div className='card-menu card-menu3'>
+                  <p className='title-card'>Поступившие</p>
+                  <p className='number-card'>52</p>
                 </div>
-                <div className='ab-card4 ab-card'>
-                  <p>Непоступившие</p>
-                  <h5>18</h5>
+                <div className='card-menu card-menu4'>
+                  <p className='title-card'>Непоступившие</p>
+                  <p className='number-card'>18</p>
                 </div>
           </div>
         <div className="chart-container" style={{width: '1090px', padding: '20px', backgroundColor: '#ffffff', borderRadius: '8px' }}>
