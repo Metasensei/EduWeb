@@ -20,15 +20,14 @@ const AdminStudent = () => {
 
     // Universitet ma'lumotlari
     const universities = [
-        { id: 1, name: "Akdeniz Universiteti (Turkiya)", city: "Turkiya", date: "31.01.2012", status: "Прием документов", kartClass: "kart1" },
-        { id: 2, name: "Akdeniz Universiteti (Angliya)", city: "Angliya", date: "31.01.2012", status: "Прием документов", kartClass: "kart2" },
-        { id: 3, name: "Akdeniz Universiteti (Palstin)", city: "Palstin", date: "31.01.2012", status: "Прием закрыт", kartClass: "kart3" },
-        { id: 4, name: "Akdeniz Universiteti (Rassiya)", city: "Rassiya", date: "31.01.2012", status: "Прием документов", kartClass: "kart4" },
-        { id: 5, name: "Akdeniz Universiteti (Fargona)", city: "Fargona", date: "31.01.2012", status: "Прием документов", kartClass: "kart5" },
-        { id: 6, name: "Akdeniz Universiteti (Andijon)", city: "Andijon", date: "31.01.2012", status: "Прием закрыт", kartClass: "kart6" },
-        { id: 7, name: "Akdeniz Universiteti (Buxoroo)", city: "Buxoroo", date: "31.01.2012", status: "Прием документов", kartClass: "kart7" },
+        { id: 1, name: "Akdeniz Universiteti (Turkiya)", city: "Antinyi", date: "31.01.2012", status: "Прием документов", kartClass: "kart1" },
+        { id: 2, name: "Akdeniz Universiteti (Angliya)", city: "Atinnyi", date: "31.01.2012", status: "Прием документов", kartClass: "kart2" },
+        { id: 3, name: "Akdeniz Universiteti (Palstin)", city: "Natiniy", date: "31.01.2012", status: "Прием закрыт", kartClass: "kart3" },
+        { id: 4, name: "Akdeniz Universiteti (Rassiya)", city: "Natiyni", date: "31.01.2012", status: "Прием документов", kartClass: "kart4" },
+        { id: 5, name: "Akdeniz Universiteti (Fargona)", city: "Nantiyi", date: "31.01.2012", status: "Прием документов", kartClass: "kart5" },
+        { id: 6, name: "Akdeniz Universiteti (Andijon)", city: "Iyitnan", date: "31.01.2012", status: "Прием закрыт", kartClass: "kart6" },
+        { id: 7, name: "Akdeniz Universiteti (Buxoroo)", city: "Iytinan", date: "31.01.2012", status: "Прием документов", kartClass: "kart7" },
     ];
-
     // Qidiruv filtrini qo'llash
     const filteredUniversities = universities.filter((uni) =>
         uni.city.toLowerCase().includes(searchTerm) || uni.name.toLowerCase().includes(searchTerm)

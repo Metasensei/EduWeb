@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import admin from "../Admin/images/admin.png";
 import "../Admin/AdminUniver.css";
-import usta from "../Admin/images/filtr.png";
 import und from '../Admin/images/sor.png';
-import downno from '../Admin/images/download.png'
+import '../Student/StudentUni.css'
 
-const AdminStudent = () => {
+
+const StudentUni = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [isFilterVisible, setIsFilterVisible] = useState(false);
     const [selectedUni, setSelectedUni] = useState(null); // Modal uchun state
@@ -16,7 +16,7 @@ const AdminStudent = () => {
 
     const toggleFilter = () => {
         setIsFilterVisible(!isFilterVisible);
-    };
+    };  
 
     // Universitet ma'lumotlari
     const universities = [
@@ -54,19 +54,10 @@ const AdminStudent = () => {
                 </span>
             </nav>
 
-            <div className="vpn">
-                <input
-                    placeholder="Поиск университетов"
-                    type="text"
-                    className="admin-src"
-                    onChange={handleSearchChange}
-                />
-                <div className="hull" onClick={toggleFilter}>
-                    <img src={usta} className="usta" alt="" />
-                </div>
-            </div>
+            
+            
 
-            <div className="idk">
+            <div className="idk idk2">
                 <div className="page2">
                     <h1 className="tage1">Название</h1>
                     <h1 className="tage2">Город</h1>
@@ -94,7 +85,7 @@ const AdminStudent = () => {
                     <h1 className="no-results kilo">Brat bunde universitet topilmadi adashmasdan yozin iltimos</h1>
                 )}
             </div>
-
+                
             {/* Modal oynasi */}
             {selectedUni && (
                 <div className="modal-overlay" onClick={closeModal}>
@@ -102,60 +93,24 @@ const AdminStudent = () => {
                         className="modal-content"
                         onClick={(e) => e.stopPropagation()} // Modal ichida bosish modalni yopmaydi
                     >
-                        
-                        <nav>
-                <h1>Университеты / Akdeniz Universiteti (Turkiya)</h1>
-                <span>
-                    <img src={admin} className="admin" alt="" />
-                    Nargiza Akhmedova
-                </span>
-            </nav>
-
-            <div className="idk2">
-                <div className="stage1">
-                    <h1 className="xp1">Имя</h1>
-                    <h1 className="fx1">Нафиса</h1>
-                </div>
-
-                <div className="stage2">
-                    <h1 className="m1">Фамилия</h1>
-                    <h1 className="m2">Абдураимова</h1>
-                </div>
-
-                <div className="stage3">
-                    <h1 className="st1">Отчество</h1>
-                    <h1 className="st2">Зафар кизи</h1>
-                </div>
-
-                <div className="stage5">
-                    <h1 className="np1">Университет</h1>
-                    <h1 className="np2">Омская гуманитарная академия</h1>
-                </div>
-
-                <div className="stage6">
-                    <h1 className="we1">Факультет</h1>
-                    <h1 className="we2">Педагогическое образование (с двумя профилями подготовки) (уровень <br /> бакалавриата))
-                    </h1>
-                </div>
-
-                <div className="stage7">
-                    <h1 className="win1">Специальность</h1>
-                    <h1 className="win2">Начальное образование и иностранный язык (английский язык</h1>
-                </div>
-
-                <div className="stage8">
-                    <h1 className="pass">Паспорт</h1>
-                    <img src={downno} className="pass1" alt="" />
-                </div>
-
-                <div className="stage9">
-                    <h1 className="din1">Диплом</h1>
-                    <img src={downno} className="win1" alt="" />
-                </div>
-
+                       <div className="wrapper">
+        <div className="header">
+          
+          <div className="h-img"><img src="" alt="" />
+          </div>
+          
+        </div>
+          <div className="body">
+            <div className="b-img"><img src="https://img.freepik.com/free-vector/waiting-concept-illustration_114360-5971.jpg?q=10&h=200" alt="" /></div>
+            
+            <div className="siu">
+                <h4>Ваша заявка была отправлена университету. <br /> Ждём ответа </h4>
+            <h5>
+                Примерное время ожидания:{''} <span style={{color: 'rgb(115, 0, 255)'}}>2 недели
+                    </span></h5>
             </div>
-                        
-                        
+          </div>
+      </div>
                     </div>
                 </div>
             )}
@@ -187,9 +142,9 @@ const AdminStudent = () => {
                     </div>
                 </>
             )}
-
         </div>
     );
 };
 
-export default AdminStudent;
+
+export default StudentUni;
